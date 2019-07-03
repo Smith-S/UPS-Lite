@@ -39,3 +39,7 @@ class ups_lite():
 
         def fine_soc(self):
             self.bus.read_byte_data(device_address, SOC_LSB)
+
+        def __call__(self)
+            self.rough_soc()
+            self.fine_soc()
