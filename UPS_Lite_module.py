@@ -24,18 +24,18 @@ class ups_lite():
         """
 
         # On UPS_Lite, MAX17040G is somehow located at i2c address 0x36
-        device_address = 0x36
+        self.device_address = 0x36
 
         # According to MAX17040G datasheet available at
         # https://datasheets.maximintegrated.com/en/ds/MAX17040-MAX17041.pdf
         # the battery’s relative state-of-charge (SOC) is provided at address
         # 04h for MSB
-        SOC_MSB = 4
+        self.SOC_MSB = 4
         # 05h for LSB
-        SOC_LSB = 5
+        self.SOC_LSB = 5
 
         def rough_soc(self):
             self.bus.read_byte_data(device_address, SOC_MSB)
 
-        def fine_soc(arg):
+        def fine_soc(self):
             self.bus.read_byte_data(device_address, SOC_LSB)
