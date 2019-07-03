@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class ups_lite():
     """docstring for ups_lite."""
 
